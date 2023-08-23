@@ -1,15 +1,21 @@
-import { initializeApp } from 'firebase/app';
-import { getFirestore } from 'firebase/firestore';
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
+import { getStorage } from "firebase/storage";
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "AIzaSyCRoMLLRYXHyoM2MwmrEKw1GuEvthrXXhE",
-    authDomain: "portfolio-29a50.firebaseapp.com",
-    projectId: "portfolio-29a50",
-    storageBucket: "portfolio-29a50.appspot.com",
-    messagingSenderId: "653987414369",
-    appId: "1:653987414369:web:56fc59f10306486075c520",
-    measurementId: "G-CGB1253024"
+  apiKey: "AIzaSyDZwS5m1DqoU6S5PXI8mRCeoENR_TxosVs",
+  authDomain: "typle-edc94.firebaseapp.com",
+  databaseURL:
+    "https://typle-edc94-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "typle-edc94",
+  storageBucket: "typle-edc94.appspot.com",
+  messagingSenderId: "693999171349",
+  appId: "1:693999171349:web:083427e3e5c3c3ab5e1b1c",
+  measurementId: "G-FF2QEKWHG0",
 };
 const app = initializeApp(firebaseConfig);
-let db = getFirestore(app)
-
-export {db}
+let db = getFirestore(app);
+const auth = getAuth(app);
+const storage = getStorage(app);
+export { db, auth, storage };
